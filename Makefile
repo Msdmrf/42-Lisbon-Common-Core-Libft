@@ -6,7 +6,7 @@
 #    By: migusant <migusant@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/10 18:13:33 by migusant          #+#    #+#              #
-#    Updated: 2025/04/21 22:59:48 by migusant         ###   ########.fr        #
+#    Updated: 2025/04/22 18:12:38 by migusant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,12 +38,10 @@ $(NAME): $(OFILES)
 
 bonus: $(NAME) $(BOFILES)
 
-# Explicit
 $(OFILES): $(CFILES)
 	$(CC) $(FLAGS) -c $^
 	$(AR) $(NAME) $(OFILES)
-	
-# Explicit
+
 $(BOFILES): $(BCFILES)
 	$(CC) $(FLAGS) -c $^
 	$(AR) $(NAME) $(BOFILES)
