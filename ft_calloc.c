@@ -6,7 +6,7 @@
 /*   By: migusant <migusant@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 17:25:24 by migusant          #+#    #+#             */
-/*   Updated: 2025/04/22 16:11:24 by migusant         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:25:19 by migusant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*nmemb_mem;
 	size_t	max_size;
 
+	if (nmemb == 0 || size == 0)
+		return(malloc(0));
 	max_size = nmemb * size;
 	if (size != 0 && nmemb != (max_size / size))
 		return (NULL);
