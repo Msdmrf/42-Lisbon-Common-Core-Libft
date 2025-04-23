@@ -1,5 +1,6 @@
 # Extra
 .vscode
+.main
 
 # Prerequisites
 *.d
