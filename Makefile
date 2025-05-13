@@ -6,7 +6,7 @@
 #    By: migusant <migusant@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/10 18:13:33 by migusant          #+#    #+#              #
-#    Updated: 2025/04/23 13:56:23 by migusant         ###   ########.fr        #
+#    Updated: 2025/05/13 16:10:59 by migusant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,16 +35,16 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OFILES)
+	$(AR) $(NAME) $(OFILES)
 
 bonus: $(NAME) $(BOFILES)
+	$(AR) $(NAME) $(BOFILES)
 
 $(OFILES): $(CFILES)
 	$(CC) $(FLAGS) -c $^
-	$(AR) $(NAME) $(OFILES)
 
 $(BOFILES): $(BCFILES)
 	$(CC) $(FLAGS) -c $^
-	$(AR) $(NAME) $(BOFILES)
 
 clean:
 	$(RM) $(OFILES) $(BOFILES)
